@@ -1,4 +1,4 @@
-# Study Desk
+# Study Desk - Deasa
 
 Your own flashcard app — real spaced repetition, cram mode, streaks, fully offline, no accounts, no fees. All data stays on your device.
 
@@ -9,7 +9,7 @@ Your own flashcard app — real spaced repetition, cram mode, streaks, fully off
 3. On the new repo page, click **uploading an existing file**, then drag in **all the files from this folder** (`index.html`, `sw.js`, `manifest.json`, `README.md`, and the three `.png` icons). Click **Commit changes**.
 4. Go to the repo's **Settings → Pages** (left sidebar). Under *Branch*, pick **main**, folder **/ (root)**, click **Save**.
 5. Wait ~1 minute, refresh that page — GitHub shows your live link:
-   `https://YOURUSERNAME.github.io/study-desk/`
+   `https://YOURUSERNAME.github.io/Deasa/`
 
 ## Install it on your iPhone
 
