@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Study Desk</title>
+<title>Deasa</title>
 <meta name="description" content="Flashcards with real spaced repetition, cram mode, and streaks. Yours, offline.">
 <meta name="theme-color" content="#142019">
 <link rel="manifest" href="./manifest.json">
@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Study Desk">
+<meta name="apple-mobile-web-app-title" content="Deasa">
 <link rel="icon" href="./icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,7 +296,7 @@ function viewHome(){
   const dayNames=["Today","Tmrw"];for(let i=2;i<7;i++){const d=new Date(Date.now()+i*DAY);dayNames.push(d.toLocaleDateString(undefined,{weekday:"short"}));}
   return `
   <div class="topbar">
-    <div class="title-row"><h1>Study Desk</h1><span class="pin"></span></div>
+    <div class="title-row"><h1>Deasa</h1><span class="pin"></span></div>
     <div style="display:flex;align-items:center;gap:9px">
       <div class="chip">
         <span style="display:flex;align-items:center;gap:5px">🔥 <b>${s.count}</b> streak</span>
@@ -690,7 +690,7 @@ function viewSettings(){
         <button class="btn btn-line" data-a="delete-all" style="color:var(--red)">${settingsUI.confirmDelete?"Confirm delete":"Delete"}</button>
       </div>
     </div></div>
-  <div class="smallnote" style="text-align:center;opacity:.6">Study Desk · offline-first · your data never leaves this device</div>`;
+  <div class="smallnote" style="text-align:center;opacity:.6">Deasa · offline-first · your data never leaves this device</div>`;
 }
 
 /* ============ SEARCH ============ */
