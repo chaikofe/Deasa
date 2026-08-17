@@ -1,6 +1,6 @@
 {
-  "name": "Study Desk",
-  "short_name": "Study Desk",
+  "name": "Deasa",
+  "short_name": "Deasak",
   "description": "Flashcards with real spaced repetition, cram mode, and streaks. Yours, offline.",
   "start_url": "./",
   "scope": "./",
