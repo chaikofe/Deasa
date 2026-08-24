@@ -1,5 +1,5 @@
-/* Study Desk service worker — makes the app work offline. */
-const CACHE = "studydesk-v1";
+/* Deasa service worker — makes the app work offline. */
+const CACHE = "deasa-v8";
 const SHELL = [
   "./",
   "./index.html",
