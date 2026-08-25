@@ -1,5 +1,5 @@
 /* Deasa service worker — makes the app work offline. */
-const CACHE = "deasa-v8";
+const CACHE = "deasa-v14";
 const SHELL = [
   "./",
   "./index.html",
