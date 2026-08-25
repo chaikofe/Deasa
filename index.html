@@ -305,8 +305,12 @@ function doExport(){
   toast("Backup downloaded");render();}
 
 /* ============ render root ============ */
+let lastViewKey=null;
 function render(){
   const app=$("#app");
+  const viewKey=route.name+":"+(route.deckId||"");
+  const sameView=viewKey===lastViewKey;
+  const keepY=sameView?(window.scrollY||0):0;
   if(route.name==="home")app.innerHTML=viewHome();
   else if(route.name==="deck")app.innerHTML=viewDeck();
   else if(route.name==="study")app.innerHTML=viewStudy();
@@ -314,7 +318,10 @@ function render(){
   else if(route.name==="search")app.innerHTML=viewSearch();
   else if(route.name==="help")app.innerHTML=viewHelp();
   bind();
-  window.scrollTo(0,0);
+  /* jump to top only when changing screens; stay put for in-place updates
+     (confirmations, toggles, edits) so buttons don't scroll away mid-tap */
+  window.scrollTo(0,keepY);
+  lastViewKey=viewKey;
 }
 function go(r){route=r;if(r.name!=="study")session=null;render();}
 
@@ -804,8 +811,7 @@ function bind(){
   });
   const si=$("#searchInput");
   if(si){si.focus();si.setSelectionRange(si.value.length,si.value.length);
-    si.addEventListener("input",()=>{searchQ=si.value;
-      const scroll=window.scrollY;render();window.scrollTo(0,scroll);});}
+    si.addEventListener("input",()=>{searchQ=si.value;render();});}
   const nt=$("#newT");
   if(nt){nt.addEventListener("keydown",e=>{if(e.key==="Enter"&&deckUI.cardType==="cloze")handle("add-card");});}
   const nd=$("#newD");
